@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Important Notice</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            background: #eeeeee;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #222;
+
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: 650px;
+
+            background: white;
+
+            border: 1px solid #cccccc;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+            padding: 45px;
+
+        }
+
+
+        /* HEADER */
+
+        .header {
+
+            border-bottom: 2px solid #222;
+
+            padding-bottom: 15px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .official {
+
+            font-size: 13px;
+
+            color: #666;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        h1 {
+
+            margin-top: 10px;
+
+            font-size: 30px;
+
+        }
+
+
+        /* WARNING */
+
+        .warning {
+
+            background: #f5f5f5;
+
+            border-left: 5px solid #222;
+
+            padding: 18px;
+
+            margin-bottom: 25px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* TEXT */
+
+        p {
+
+            line-height: 1.7;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .important {
+
+            font-weight: bold;
+
+        }
+
+
+        /* BUTTON */
+
+        .button-container {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+        }
+
+
+        button {
+
+            background: #222;
+
+            color: white;
+
+            border: none;
+
+            padding: 14px 35px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+        }
+
+
+        button:hover {
+
+            background: #444;
+
+        }
+
+
+        .small-text {
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 12px;
+
+            margin-top: 20px;
+
+        }
+
+
+        /* =================================
+           FUNNY SCREEN
+        ================================= */
+
+        .funny {
+
+            display: none;
+
+            text-align: center;
+
+            animation: appear 0.7s ease;
+
+        }
+
+
+        .funny h2 {
+
+            font-size: 32px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* IMAGE */
+
+        .funny-image {
+
+            width: 100%;
+
+            max-width: 450px;
+
+            margin: 20px auto;
+
+        }
+
+
+        .funny-image img {
+
+            width: 100%;
+
+            display: block;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+        }
+
+
+        /* FUNNY TEXT */
+
+        .reveal-text {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+
+        }
+
+
+        .subtext {
+
+            color: #666;
+
+            font-size: 15px;
+
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.7);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .container {
+
+                padding: 30px 20px;
+
+            }
+
+
+            h1 {
+
+                font-size: 24px;
+
+            }
+
+
+            .funny h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .reveal-text {
+
+                font-size: 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- =================================
+             SERIOUS PAGE
+        ================================= -->
+
+        <div id="seriousPage">
+
+
+            <div class="header">
+
+                <div class="official">
+
+                    OFFICIAL NOTICE
+
+                </div>
+
+
+                <h1>
+
+                    Important System Announcement
+
+                </h1>
+
+            </div>
+
+
+            <div class="warning">
+
+                PLEASE READ THIS NOTICE CAREFULLY
+
+            </div>
+
+
+            <p>
+
+                This message contains information that may be
+                considered <span class="important">extremely important</span>.
+
+            </p>
+
+
+            <p>
+
+                Before continuing, please make sure that you are
+                mentally and emotionally prepared to receive the
+                information contained in the following section.
+
+            </p>
+
+
+            <p>
+
+                Failure to proceed may result in a temporary
+                lack of understanding regarding the situation.
+
+            </p>
+
+
+            <p>
+
+                By clicking the button below, you acknowledge that
+                you are ready to continue.
+
+            </p>
+
+
+            <div class="button-container">
+
+                <button onclick="reveal()">
+
+                    PROCEED
+
+                </button>
+
+            </div>
+
+
+            <div class="small-text">
+
+                This notice is serious.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================
+             FUNNY PAGE
+        ================================= -->
+
+        <div id="funnyPage" class="funny">
+
+
+            <h2>
+
+                🚨 IMPORTANT INFORMATION 🚨
+
+            </h2>
+
+
+            <div class="funny-image">
+
+                <img src="hehe.jpg" alt="Important information">
+
+            </div>
+
+
+            <div class="reveal-text">
+
+                YOU HAVE BEEN SELECTED.
+
+            </div>
+
+
+            <p>
+
+                Selected for absolutely nothing.
+
+            </p>
+
+
+            <p class="subtext">
+
+                Thank you for wasting approximately
+                30 seconds of your valuable time.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Have a nice day. 😂
+                </strong>
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+        function reveal() {
+
+            document.getElementById("seriousPage").style.display = "none";
+
+            document.getElementById("funnyPage").style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
